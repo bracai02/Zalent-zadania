@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>4 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<label> a = <input type="number" id="a"> </label>
+	<label> b = <input type="number" id="b"> </label>
+	<label> c = <input type="number" id="c"> </label>
+
+	<input type="submit" value="Informacje o liczbach" onclick="matematyka()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function matematyka()
+		{
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value;
+			var d = a;
+			var e = b;
+			var f = c;
+			var naj = Math.min(a,b,c)
+			var wie = Math.max(a,b,c)
+			
+			
+			if(a<0)
+			{
+
+				d = a * -1
+			}
+			if(b<0)
+			{
+
+				e = b * -1
+			}
+			if(c<0)
+			{
+
+				f = c * -1
+			}
+			
+			document.getElementById("wynik").innerHTML += "<p>"+naj+"</p>";
+			document.getElementById("wynik").innerHTML += "<p>"+wie+"</p>";
+			document.getElementById("wynik").innerHTML += "<p>"+d+" "+e+" "+f+"</p>";
+			if(a%2==0)
+			{
+				document.getElementById("wynik").innerHTML += "<p>"+a+"jest parzysty"+"</p>";
+			}
+			else{
+			document.getElementById("wynik").innerHTML += "<p>"+a+"jest nieparzysty"+"</p>";
+			}
+			if(b%2==0)
+			{
+
+				
+				document.getElementById("wynik").innerHTML += "<p>"+b+"jest parzysty"+"</p>";
+			}
+			else{
+			document.getElementById("wynik").innerHTML += "<p>"+b+"jest nieparzysty"+"</p>";
+			}
+			if(c%2==0)
+			
+			{
+
+				
+				document.getElementById("wynik").innerHTML += "<p>"+c+"jest parzysty"+"</p>";
+			}
+		else {
+			document.getElementById("wynik").innerHTML += "<p>"+c+"jest nieparzysty"+"</p>";
+		 	}
+
+		}
+				
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>3 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	P = ( <input type="number" id="x"> , <input type="number" id="y"> )
+
+	<input type="submit" value="Sprawdź ćwiartkę" onclick="ktora_cwiartka()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function ktora_cwiartka()
+		{
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			if(x>0 && y>0){
+			document.getElementById("wynik").innerHTML = "Jestes w 1 czwiarcze";
+
+			}
+			if(x<0 && y>0){
+			document.getElementById("wynik").innerHTML = "Jestes w 2 czwiarcze";
+
+			}
+			if(x>0 && y<0){
+			document.getElementById("wynik").innerHTML = "Jestes w 4 czwiarcze";
+
+			}
+			if(x<0 && y<0){
+			document.getElementById("wynik").innerHTML = "Jestes w 3 czwiarcze";
+
+			}
+			if(x==0 && y!=0 || x!=0 && y==0){
+			document.getElementById("wynik").innerHTML = "Punkt leży na jednej z osi układu";
+
+			}
+			if(x==0 && y==0){
+			document.getElementById("wynik").innerHTML = "Jest początkiem układu współrzędnych";
+
+			}
+			if(x==15 && y==96){
+			document.getElementById("wynik").innerHTML = "krótki zarys życiorysu Kartezjusza";
+
+			}
+			
+		}
+
+	</script>
+
+</body>
+</html>
